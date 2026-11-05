@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.png binary
+*.pdf binary
+*.zip binary
+*.dmg binary
+THIRD_PARTY_NOTICES.txt binary
