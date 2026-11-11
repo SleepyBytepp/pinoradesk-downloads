@@ -1,50 +1,13 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>轻栈常见问题与解决办法</title>
-  <style>
-
-span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-
-ul.task-list[class]{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-font-size: inherit;
-width: 0.8em;
-margin: 0 0.8em 0.2em -1.6em;
-vertical-align: middle;
-}
-.display.math{display: block; text-align: center; margin: 0.5rem auto;}
-</style>
-  <style type="text/css">:root{color-scheme:light}*{box-sizing:border-box}body{margin:0 auto;max-width:1100px;padding:36px 40px 64px;color:#23352d;background:#f8faf7;font:16px/1.8 system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}header{padding:24px 30px;background:#eaf2e9;border:1px solid #d6e3d7;border-radius:18px;margin-bottom:26px}h1{font-size:32px;line-height:1.4;color:#244d3b}h2{font-size:24px;color:#244d3b;margin-top:42px;border-bottom:1px solid #d6e3d7;padding-bottom:8px;scroll-margin-top:20px}h3{font-size:19px;margin-top:28px;color:#244d3b}a{color:#245e42;text-underline-offset:3px}#TOC{padding:20px 26px;background:#fff;border:1px solid #d6e3d7;border-radius:14px}#TOC ul{padding-left:24px}table{border-collapse:collapse;width:100%;background:#fff;font-size:15px;margin:20px 0}th,td{text-align:left;vertical-align:top;padding:12px 14px;border:1px solid #dce6dc}th{color:#fff;background:#244d3b}tbody tr:nth-child(even){background:#eff5ef}pre{background:#eaf0e9;padding:16px;border-radius:10px;overflow-x:auto}code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.9em;overflow-wrap:anywhere}p,li{overflow-wrap:anywhere}strong{color:#214c36}blockquote{border-left:4px solid #7b9d84;margin-left:0;padding-left:18px;color:#66796d}@media(max-width:640px){body{padding:18px 16px 40px;font-size:15px}h1{font-size:26px}h2{font-size:21px}th,td{padding:9px;font-size:13px}}@media print{body{background:white;max-width:none;padding:0}pre,table{break-inside:avoid}a{color:inherit}}
-</style>
-</head>
-<body>
-<header id="title-block-header">
-<h1 class="title">轻栈常见问题与解决办法</h1>
-</header>
-<nav id="TOC" role="doc-toc">
-<h2 id="toc-title">问题目录</h2>
-<ul>
-<li><a href="#问题索引" id="toc-问题索引">问题索引</a></li>
-</ul>
-</nav>
-<p>适用版本：0.2.0 Mac 开发版。更新日期：2026-11-05。</p>
-<p><a href="https://github.com/SleepyBytepp/pinoradesk-downloads/blob/codex/download-site/README.md">返回首页</a>
-· <a href="https://github.com/SleepyBytepp/pinoradesk-downloads/blob/codex/download-site/docs/USER_GUIDE.zh-CN.md">详细使用说明</a>
-· <a href="https://github.com/SleepyBytepp/pinoradesk-downloads/blob/codex/download-site/docs/VERIFICATION_0.2.0.md">验证范围</a></p>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="轻栈 PinoraDesk Mac 预发布使用指南，含JSON、截图、贴图、文件与插件操作及问题排查"><title>轻栈 PinoraDesk 常见问题 · v0.2.0-preview.2</title><style>
+@page{size:A4;margin:18mm 17mm 20mm}*{box-sizing:border-box}html{font-size:14px}body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC",sans-serif;color:#24392d;background:#eef2ec;line-height:1.7;margin:0}.paper{max-width:980px;margin:28px auto;background:#fff;padding:48px 58px;box-shadow:0 3px 18px #20382116}h1,h2,h3,h4{color:#294c38;line-height:1.35;break-after:avoid-page}h1{font-size:30px;border-bottom:3px solid #416b4f;padding-bottom:14px}h2{font-size:22px;margin-top:30px;padding-top:8px;border-top:1px solid #d6e1d5}h3{font-size:17px;margin-top:24px}h4{font-size:15px}p{margin:10px 0}a{color:#316e50;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}a:hover{color:#17472c}ul,ol{padding-left:1.7em}li{margin:4px 0}li::marker{color:#4f6e57}strong{font-weight:650}table{width:100%;border-collapse:collapse;font-size:12px;table-layout:auto;margin:16px 0}th,td{border:1px solid #d6e1d5;text-align:left;padding:7px 9px;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1e8;color:#2e5239;font-weight:650}tbody tr:nth-child(even){background:#f7f9f5}thead{display:table-header-group}tr{break-inside:avoid-page}blockquote{margin:16px 0;padding:10px 15px;border-left:4px solid #6c9573;background:#eff5eb;color:#3b5541}blockquote p{margin:4px 0}pre{background:#f0f4ee;border:1px solid #d8e2d5;border-radius:6px;padding:12px 14px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:11px;line-height:1.6;break-inside:avoid-page}code{font-family:"SFMono-Regular",Menlo,monospace;font-size:.92em;background:#eff3ed;border-radius:3px;padding:1px 3px;overflow-wrap:anywhere}pre code{padding:0;background:none}img{display:block;max-width:100%;height:auto;border:1px solid #d6e1d5;border-radius:8px;margin:18px auto;break-inside:avoid-page}.edition{font-size:12px;color:#667a6a;letter-spacing:.04em}.download-links{padding:15px 18px;background:#e8f0e5;border-radius:8px;font-size:13px}.download-links a{margin-right:14px}.toc{margin:24px 0;padding:18px;background:#f5f8f2;border:1px solid #d6e1d5;border-radius:8px}.toc h2{border:0;padding:0;margin:0 0 8px;font-size:18px}.toc ol{columns:2;margin:0;padding-left:0;list-style:none;font-size:13px}.toc li{break-inside:avoid}.print-button{position:fixed;right:18px;top:14px;padding:9px 14px;border:0;border-radius:7px;background:#385d42;color:#fff;font:inherit;cursor:pointer}.section-body p,.section-body li{orphans:3;widows:3}.section-body p:has(>strong:only-child){break-after:avoid-page}.note{font-size:12px;color:#5d7161}.doc-footer{margin-top:30px;padding-top:14px;border-top:1px solid #d6e1d5;font-size:12px;color:#627566}@media(max-width:700px){.paper{padding:28px 20px;margin:0}.toc ol{columns:1}.print-button{position:static;margin:12px}table{font-size:11px}h1{font-size:25px}}@media print{html{font-size:10.3pt}body{background:#fff;line-height:1.64}.paper{max-width:none;margin:0;padding:0;box-shadow:none}.print-button{display:none}h1{font-size:24pt}h2{font-size:16pt;margin-top:19pt}h3{font-size:12pt;margin-top:16pt}h4{font-size:10.7pt}p{margin:7pt 0}table{font-size:8.5pt}th,td{padding:5pt 6pt}a{color:inherit;text-decoration:none}img{max-height:155mm;object-fit:contain}.toc{break-inside:avoid-page}.toc ol{font-size:9pt}.download-links{break-inside:avoid-page}.doc-footer{font-size:8.5pt}blockquote{break-inside:avoid-page}pre{font-size:8.5pt}code{font-size:.9em}}
+</style></head><body><button class="print-button" onclick="window.print()">打印 / 保存 PDF</button><main class="paper"><div class="edition">PINORADESK · 轻栈 &nbsp; / &nbsp; MAC 预发布 v0.2.0-preview.2 &nbsp; / &nbsp; 2026-11-11</div><div class="download-links"><strong>Apple Silicon Mac</strong> · <a href="https://github.com/SleepyBytepp/pinoradesk-downloads/releases/download/v0.2.0-preview.2/PinoraDesk.dmg">下载 DMG</a><a href="https://github.com/SleepyBytepp/pinoradesk-downloads/releases/download/v0.2.0-preview.2/PinoraDesk.zip">下载 ZIP</a><a href="https://github.com/SleepyBytepp/pinoradesk-downloads/releases/tag/v0.2.0-preview.2">版本页与校验文件</a><p class="note">本文件可离线阅读。下载附件是否可用以版本页实际状态为准；尚未公证，Windows 暂停。</p></div><nav class="toc" aria-label="目录"><h2>阅读目录</h2><ol><li><a href="#section-2">问题索引</a></li><li><a href="#section-3">1. 下载的是源码 ZIP，还是能直接打开的应用？</a></li><li><a href="#section-5">2. 我的 Mac 或 Windows 能用吗？</a></li><li><a href="#section-6">3. 首次打开提示无法验证开发者，怎么办？</a></li><li><a href="#section-7">4. 按 Control+Option+Space 没反应，是不是启动失败？</a></li><li><a href="#section-8">5. 点了“退出轻栈”后，快捷键为什么不能重新打开？</a></li><li><a href="#section-9">6. 窗口一点击其他应用就消失，是否崩溃了？</a></li><li><a href="#section-10">7. 截图一直提示需要屏幕录制权限，或“授权截图”没有弹窗</a></li><li><a href="#section-11">8. F3 打开了调度中心，或者没有贴图</a></li><li><a href="#section-12">9. 已勾选“记住此目录”，重启后为什么还要重新选择？</a></li><li><a href="#section-13">10. 剪贴板页面为什么没有自动出现历史？</a></li><li><a href="#section-14">11. 贴图重启后没有恢复；遮挡后的内容还会保存吗？</a></li><li><a href="#section-15">12. 截图历史、快捷保存目录为什么在重启后消失？</a></li><li><a href="#section-16">13. 插件安装成功却不能运行，或者提示 WASM 未开启</a></li><li><a href="#section-17">14. GitHub Actions 显示失败，还能从哪里安装？</a></li><li><a href="#section-18">15. 反馈问题时提供什么？</a></li><li><a href="#section-19">16. 新版功能在哪里，为什么线上下载名字仍很长？</a></li><li><a href="#section-20">17. 贴图取色没有出现，或颜色与桌面不同？</a></li><li><a href="#section-21">18. 按逗号／句号为什么没有切换截图历史？</a></li><li><a href="#section-22">19. 如何打印？取消后编辑还在吗？“任务已提交”算打印完成吗？</a></li><li><a href="#section-23">20. 如何跨屏截图，为什么所有屏幕缩在一个总览里？</a></li><li><a href="#section-24">21. 如何在截图中显示鼠标指针？为什么开启后有时没有？</a></li><li><a href="#section-25">22. 怎样从一块屏幕拖到另一块屏幕？</a></li><li><a href="#section-26">JSON 查询栏和窗口拖动</a></li></ol></nav><article class="section-body"><h1 id="section-1">PinoraDesk（轻栈）常见问题</h1>
+<p>适用版本：v0.2.0-preview.2 Mac 预发布。更新日期：2026-11-11。</p>
+<p><a href="https://github.com/SleepyBytepp/pinoradesk-downloads">返回首页</a> · <a href="PinoraDesk_User_Guide_0.2.0.html">详细使用说明</a> · <a href="https://github.com/SleepyBytepp/pinoradesk-downloads/blob/release/download-site/docs/VERIFICATION_0.2.0.md">验证范围</a></p>
 <p>先确认下载类型、芯片架构和应用版本，再按对应问题操作。这里区分使用方法与已经验证的范围；自动检查通过不代表所有系统权限和真实设备场景都已验收。</p>
-<h2 id="问题索引">问题索引</h2>
+<h2 id="section-2">问题索引</h2>
 <ul>
-<li><a href="#download">下载与安装</a>：源码
-ZIP、应用附件、公开下载入口</li>
-<li><a href="#platform">平台支持</a>：Apple Silicon、Intel、macOS 14 和
-Windows</li>
+<li><a href="#download">下载与安装</a>：源码 ZIP、应用附件、公开下载入口</li>
+<li><a href="#platform">平台支持</a>：Apple Silicon、Intel、macOS 14 和 Windows</li>
 <li><a href="#first-open">首次打开被系统拦截</a></li>
 <li><a href="#launcher-shortcut">快捷键没有反应</a></li>
 <li><a href="#quit">退出后快捷键失效</a></li>
@@ -58,214 +21,191 @@ Windows</li>
 <li><a href="#plugins">插件装好后不能运行、WASM 开关关闭</a></li>
 <li><a href="#ci">GitHub Actions 显示失败</a></li>
 <li><a href="#report">反馈问题时需要哪些信息</a></li>
+<li><a href="#local-iteration">新版功能在哪里、为什么线上文件名仍很长</a></li>
+<li><a href="#capture-desktop">如何跨屏截图，为什么屏幕缩在一个总览里</a></li>
+<li><a href="#capture-cursor">截图如何包含鼠标指针，为什么有时看不到</a></li>
+<li><a href="#pin-color">贴图取色没有出现或颜色与桌面不同</a></li>
+<li><a href="#capture-history-navigation">逗号／句号为什么不能切换截图历史</a></li>
+<li><a href="#capture-print">打印入口、取消和任务已提交是什么意思</a></li>
 </ul>
-<p><a id="download"></a> ## 1. 下载的是源码
-ZIP，还是能直接打开的应用？</p>
-<p><strong>现象：</strong> 解压后只有
-<code>README</code>、<code>docs</code> 等下载站资料，没有可以双击的
-<code>PinoraDesk.app</code>；也可能拿到只有
-<code>src</code>、<code>package.json</code> 等工程文件的应用源码包。</p>
-<p><strong>排查：</strong> 本公开下载站的
-<code>Code → Download ZIP</code> 和自动生成的 <code>Source code</code>
-只打包下载站资料，不含应用实现源码。PDF、HTML
-是说明文档，也不是应用。</p>
+<p><a id="download"></a></p>
+<h2 id="section-3">1. 下载的是源码 ZIP，还是能直接打开的应用？</h2>
+<p><strong>现象：</strong> 解压后只有 <code>README</code>、<code>docs</code> 等下载站资料，没有可以双击的 <code>PinoraDesk.app</code>；也可能拿到只有 <code>src</code>、<code>package.json</code> 等工程文件的应用源码包。</p>
+<p><strong>排查：</strong> GitHub 的 <code>Code → Download ZIP</code> 和自动生成的 <code>Source code</code> 附件是源码。PDF、HTML 是说明文档，也不是应用。</p>
 <p><strong>操作：</strong></p>
-<ol type="1">
-<li>回到<a href="https://github.com/SleepyBytepp/pinoradesk-downloads/blob/codex/download-site/README.md">仓库首页</a>，使用首页明确列出的应用下载入口，并核对版本和适用芯片。</li>
-<li>只有包含 <code>PinoraDesk.app</code> 的 Mac
-应用附件才用于直接运行；先完整解压，再打开应用。后续一直使用同一份副本，避免在多个解压目录之间来回打开。</li>
-<li>希望开发或自行构建时，按私有源码仓库的开发说明（需维护者授权）操作；仅下载源码不等于已经安装应用。</li>
+<ol>
+<li>回到<a href="https://github.com/SleepyBytepp/pinoradesk-downloads">仓库首页</a>，使用首页明确列出的应用下载入口，并核对版本和适用芯片。</li>
+<li>只有包含 <code>PinoraDesk.app</code> 的 Mac 应用附件才用于直接运行；先完整解压，再打开应用。后续一直使用同一份副本，避免在多个解压目录之间来回打开。</li>
+<li>源码开发需要独立的源码仓库访问权限；仅下载或安装应用不等于获得源码，也不等于已经准备好开发环境。</li>
 </ol>
-<p><strong>边界：</strong>
-若某个平台没有明确提供应用附件，就不能把源码或 CI
-日志当成该平台的安装器。当前是开发版，不是已经完成公证和正式发行验收的通用安装包。</p>
-<h3 id="下载链接显示404或无权限">下载链接显示404或无权限</h3>
+<p><strong>边界：</strong> 若某个平台没有明确提供应用附件，就不能把源码或 CI 日志当成该平台的安装器。当前是开发版，不是已经完成公证和正式发行验收的通用安装包。</p>
+<h3 id="section-4">下载链接显示404或无权限</h3>
 <p><strong>排查与操作：</strong> 应用通过独立的<a href="https://github.com/SleepyBytepp/pinoradesk-downloads">公开下载仓库</a>提供，不需要源码仓库权限。先确认版本页已经发布且附件存在，再从版本页重新下载。预发布版本请使用明确的版本页，不要只找“latest”。如果打开的是私有源码仓库链接，则需要相应访问权限；公开下载页与私有源码不是同一个入口。</p>
-<p><strong>边界：</strong>
-公开下载不意味着源码公开。草稿版本对普通访问者不可见；下载入口应指向已发布的开发预览版本。不要分享密码、访问令牌或浏览器登录信息，也不要把它们拼进下载网址。</p>
-<p><a id="platform"></a> ## 2. 我的 Mac 或 Windows 能用吗？</p>
-<p><strong>现象：</strong> 下载页标有
-ARM64，或系统提示应用不适用于这台电脑。</p>
+<p><strong>边界：</strong> 公开下载不意味着源码公开。草稿版本对普通访问者不可见；下载入口应指向已发布的开发预览版本。不要分享密码、访问令牌或浏览器登录信息，也不要把它们拼进下载网址。</p>
+<p><a id="platform"></a></p>
+<h2 id="section-5">2. 我的 Mac 或 Windows 能用吗？</h2>
+<p><strong>现象：</strong> 下载页标有 ARM64，或系统提示应用不适用于这台电脑。</p>
 <p><strong>排查与操作：</strong></p>
-<ol type="1">
+<ol>
 <li>在 macOS 的“关于本机”中查看芯片和系统版本。</li>
-<li>本轮应用与本机验证针对 <strong>Apple Silicon／M 系列
-Mac（ARM64）</strong>，已验证环境是 <strong>macOS 15.2
-ARM64</strong>；下载时选择与芯片匹配的应用附件。</li>
-<li>Intel Mac 用户应等待明确标注 Intel／x64 或 Universal
-且有相应验证的版本，不能直接套用 ARM64 包。</li>
+<li>当前应用与开发设备验证针对 <strong>Apple Silicon／M 系列 Mac（ARM64）</strong>，已验证环境是 <strong>macOS 15.2 ARM64</strong>；下载时选择与芯片匹配的应用附件。</li>
+<li>Intel Mac 用户应等待明确标注 Intel／x64 或 Universal 且有相应验证的版本，不能直接套用 ARM64 包。</li>
 </ol>
-<p><strong>边界：</strong> macOS 14 是当前最低配置目标，尚无 macOS 14
-实机验收。Windows 11 x64 是平台目标，Windows
-功能、构建和安装仍未完成相应验证；CI 配置中出现 Windows
-不代表已经有可用的 Windows 发行包。</p>
-<p><a id="first-open"></a> ## 3.
-首次打开提示无法验证开发者，怎么办？</p>
-<p><strong>现象：</strong> macOS 提示开发者无法验证，或 Apple
-无法检查应用是否包含恶意软件。</p>
-<p><strong>排查：</strong> 当前 Mac 开发包使用本机开发签名，尚未作为
-Apple Developer ID
-公证发行包提供。首先确认下载来自项目明确提供的入口，版本与附件相符。</p>
-<p><strong>操作：</strong> 只有确认来源可信且文件未被篡改时，才按 Apple
-的单应用例外流程处理：</p>
-<ol type="1">
+<p><strong>边界：</strong> macOS 14 是当前最低配置目标，尚无 macOS 14 实机验收。Windows 11 x64 是平台目标，相关工作当前暂停，Windows 功能、构建和安装仍未完成相应验证；CI 配置中出现 Windows 不代表已经有可用的 Windows 发行包。</p>
+<p><a id="first-open"></a></p>
+<h2 id="section-6">3. 首次打开提示无法验证开发者，怎么办？</h2>
+<p><strong>现象：</strong> macOS 提示开发者无法验证，或 Apple 无法检查应用是否包含恶意软件。</p>
+<p><strong>排查：</strong> 当前 Mac 开发包使用本机开发签名，尚未作为 Apple Developer ID 公证发行包提供。首先确认下载来自项目明确提供的入口，版本与附件相符。</p>
+<p><strong>操作：</strong> 只有确认来源可信且文件未被篡改时，才按 Apple 的单应用例外流程处理：</p>
+<ol>
 <li>先尝试打开该应用一次。</li>
-<li>进入“系统设置 →
-隐私与安全性”，找到刚才被拦截的应用，选择“仍要打开”。</li>
+<li>进入“系统设置 → 隐私与安全性”，找到刚才被拦截的应用，选择“仍要打开”。</li>
 <li>核对应用名称，再按系统提示确认打开。</li>
 </ol>
-<p>此流程由 Apple 官方说明：<a href="https://support.apple.com/zh-cn/102445">在 Mac 上安全地打开
-App</a>。它为具体应用建立例外，不需要关闭整台 Mac 的“门禁”。</p>
-<p><strong>边界：</strong>
-若提示应用“会损坏你的电脑”、被检测出恶意内容或“已损坏”，不要将其当作普通的开发者验证提示继续强行打开；停止使用该副本，重新核对下载与完整性并反馈原始提示。系统没有提供“仍要打开”或设备受到组织策略管理时，按系统或管理员要求处理；不能保证所有拦截都允许手动放行。上述警告的区别同样见
-<a href="https://support.apple.com/zh-cn/102445">Apple
-官方说明</a>。</p>
-<p><a id="launcher-shortcut"></a> ## 4. 按 Control+Option+Space
-没反应，是不是启动失败？</p>
-<p><strong>现象：</strong>
-应用已经打开，但演示中的组合键唤不出搜索框。</p>
+<p>此流程由 Apple 官方说明：<a href="https://support.apple.com/zh-cn/102445">在 Mac 上安全地打开 App</a>。它为具体应用建立例外，不需要关闭整台 Mac 的“门禁”。</p>
+<p><strong>边界：</strong> 若提示应用“会损坏你的电脑”、被检测出恶意内容或“已损坏”，不要将其当作普通的开发者验证提示继续强行打开；停止使用该副本，重新核对下载与完整性并反馈原始提示。系统没有提供“仍要打开”或设备受到组织策略管理时，按系统或管理员要求处理；不能保证所有拦截都允许手动放行。上述警告的区别同样见 <a href="https://support.apple.com/zh-cn/102445">Apple 官方说明</a>。</p>
+<p><a id="launcher-shortcut"></a></p>
+<h2 id="section-7">4. 按 Control+Option+Space 没反应，是不是启动失败？</h2>
+<p><strong>现象：</strong> 应用已经打开，但演示中的组合键唤不出搜索框。</p>
 <p><strong>排查与操作：</strong></p>
-<ol type="1">
-<li><strong>新配置默认是
-<code>Option+Space</code></strong>。<code>Control+Option+Space</code>
-是开发设备为了与其他工具共存而采用的个人配置，不会自动复制到新安装。</li>
-<li>先从 Dock
-图标或菜单栏的打开入口显示主窗口，进入设置，查看实际保存和注册的快捷键。</li>
+<ol>
+<li><strong>新配置默认是 <code>Option+Space</code></strong>。<code>Control+Option+Space</code> 是开发设备为了与其他工具共存而采用的个人配置，不会自动复制到新安装。</li>
+<li>先从 Dock 图标或菜单栏的打开入口显示主窗口，进入设置，查看实际保存和注册的快捷键。</li>
 <li>有快捷键冲突或注册失败提示时，选择其他组合并保存，再测试；不要只修改输入框而未保存。</li>
 </ol>
-<p><strong>边界：</strong>
-其他应用或系统功能可能占用组合键。此步骤不需要录屏权限；应用已经真正退出时，应先按<a href="#quit">退出后热键失效</a>处理。</p>
-<p><a id="quit"></a> ## 5.
-点了“退出轻栈”后，快捷键为什么不能重新打开？</p>
+<p><strong>边界：</strong> 其他应用或系统功能可能占用组合键。此步骤不需要录屏权限；应用已经真正退出时，应先按<a href="#quit">退出后热键失效</a>处理。</p>
+<p><a id="quit"></a></p>
+<h2 id="section-8">5. 点了“退出轻栈”后，快捷键为什么不能重新打开？</h2>
 <p><strong>现象：</strong> 退出后按唤起键、截图键或 F3 都没有反应。</p>
-<p><strong>排查与操作：</strong> 从 Finder 或你保存应用的位置重新打开
-<code>PinoraDesk.app</code>，再使用快捷键。需要登录后自动运行时，在设置中明确开启开机启动；它默认关闭。</p>
-<p><strong>边界：</strong> 关闭窗口或按 Esc
-通常只是隐藏，应用继续运行；菜单栏的“退出轻栈”是真正结束进程，也会停止它注册的全局快捷键。快捷键本身不是应用未运行时的启动服务。</p>
-<p><a id="hide-on-blur"></a> ## 6.
-窗口一点击其他应用就消失，是否崩溃了？</p>
+<p><strong>排查与操作：</strong> 从 Finder 或你保存应用的位置重新打开 <code>PinoraDesk.app</code>，再使用快捷键。需要登录后自动运行时，在设置中明确开启开机启动；它默认关闭。</p>
+<p><strong>边界：</strong> 关闭窗口或按 Esc 通常只是隐藏，应用继续运行；菜单栏的“退出轻栈”是真正结束进程，也会停止它注册的全局快捷键。快捷键本身不是应用未运行时的启动服务。</p>
+<p><a id="hide-on-blur"></a></p>
+<h2 id="section-9">6. 窗口一点击其他应用就消失，是否崩溃了？</h2>
 <p><strong>现象：</strong> 搜索框出现后，切换到其他应用便隐藏。</p>
-<p><strong>排查与操作：</strong> 用已配置的唤起键或 Dock
-再次显示主窗口。若希望它暂时留在屏幕上，在设置中关闭“失去焦点隐藏”，保存后再试。</p>
-<p><strong>边界：</strong>
-失焦隐藏默认开启，是启动器行为，单凭窗口消失不能判断为崩溃。若重新打开也立即退出，记录系统提示并按<a href="#report">反馈信息</a>提交；不要反复修改权限来处理普通窗口隐藏。</p>
-<p><a id="screen-permission"></a> ## 7.
-截图一直提示需要屏幕录制权限，或“授权截图”没有弹窗</p>
-<p><strong>现象：</strong>
-点击截图后看不到桌面选区，提示录屏权限未允许；点击授权按钮也没有系统弹框。</p>
+<p><strong>排查与操作：</strong> 用已配置的唤起键或 Dock 再次显示主窗口。若希望它暂时留在屏幕上，在设置中关闭“失去焦点隐藏”，保存后再试。</p>
+<p><strong>边界：</strong> 失焦隐藏默认开启，是启动器行为，单凭窗口消失不能判断为崩溃。若重新打开也立即退出，记录系统提示并按<a href="#report">反馈信息</a>提交；不要反复修改权限来处理普通窗口隐藏。</p>
+<p><a id="screen-permission"></a></p>
+<h2 id="section-10">7. 截图一直提示需要屏幕录制权限，或“授权截图”没有弹窗</h2>
+<p><strong>现象：</strong> 点击截图后看不到桌面选区，提示录屏权限未允许；点击授权按钮也没有系统弹框。</p>
 <p><strong>排查与操作：</strong></p>
-<ol type="1">
-<li>确认当前运行的是你准备长期使用的那份
-<code>PinoraDesk.app</code>，不要同时从旧版、不同解压目录或自行重建的副本启动。</li>
-<li>打开应用提供的系统录屏设置入口，或进入“系统设置 → 隐私与安全性 →
-屏幕录制／屏幕与系统音频录制”。名称可能随系统版本不同。</li>
-<li>在列表中找到当前应用并允许；未列出时，用列表下方“+”选择<strong>当前这份应用</strong>。Apple
-的添加和开关步骤见<a href="https://support.apple.com/zh-cn/guide/mac-help/mchld6aa7d23/27/mac/27">控制对录屏和系统录音的访问</a>。</li>
+<ol>
+<li>确认当前运行的是你准备长期使用的那份 <code>PinoraDesk.app</code>，不要同时从旧版、不同解压目录或自行重建的副本启动。</li>
+<li>打开应用提供的系统录屏设置入口，或进入“系统设置 → 隐私与安全性 → 屏幕录制／屏幕与系统音频录制”。名称可能随系统版本不同。</li>
+<li>在列表中找到当前应用并允许；未列出时，用列表下方“+”选择<strong>当前这份应用</strong>。Apple 的添加和开关步骤见<a href="https://support.apple.com/zh-cn/guide/mac-help/mchld6aa7d23/27/mac/27">控制对录屏和系统录音的访问</a>。</li>
 <li>实际修改允许状态后，若系统要求退出重开，先通过菜单栏“退出轻栈”真正结束，再打开同一副本。仅关闭搜索窗口不等于退出。</li>
-<li>再按
-<code>Control+Option+A</code>，先验证能否一次拖框；然后单独验证复制与粘贴。</li>
+<li>再按 <code>Control+Option+A</code>，先验证能否一次拖框；然后单独验证复制与粘贴。</li>
 </ol>
-<p><strong>边界：</strong>
-没有弹出授权框不等于应用已经获权。不要在未改变允许状态时反复退出重开，也不需要自行重启整台
-Mac。本机固定签名的目的在于保持身份稳定；自行重建或更换签名后，系统可能需要重新识别应用。手动允许成功也不能替代跨屏、受保护内容和完整权限矩阵的验证。</p>
-<p><a id="function-keys"></a> ## 8. F3 打开了调度中心，或者没有贴图</p>
-<p><strong>现象：</strong> 按 F3
-出现系统界面；按键没有触发贴图或全部显隐。</p>
+<p><strong>边界：</strong> 没有弹出授权框不等于应用已经获权。不要在未改变允许状态时反复退出重开，也不需要自行重启整台 Mac。本机固定签名的目的在于保持身份稳定；自行重建或更换签名后，系统可能需要重新识别应用。手动允许成功也不能替代跨屏、受保护内容和完整权限矩阵的验证。</p>
+<p><a id="function-keys"></a></p>
+<h2 id="section-11">8. F3 打开了调度中心，或者没有贴图</h2>
+<p><strong>现象：</strong> 按 F3 出现系统界面；按键没有触发贴图或全部显隐。</p>
 <p><strong>排查与操作：</strong></p>
-<ol type="1">
-<li>确认轻栈仍在运行，再试 <code>Fn+F3</code> 或
-<code>地球仪键+F3</code>；具体取决于键盘和功能键设置。</li>
+<ol>
+<li>确认轻栈仍在运行，再试 <code>Fn+F3</code> 或 <code>地球仪键+F3</code>；具体取决于键盘和功能键设置。</li>
 <li>如果不希望使用功能键，可在应用设置中改成未被占用的组合键，并确认保存成功。</li>
-<li>默认 F3 是从剪贴板贴图或恢复最后关闭项，<code>Shift+F3</code>
-是全部显隐；不同动作不要混用。</li>
+<li>默认 F3 是从剪贴板贴图或恢复最后关闭项，<code>Shift+F3</code> 是全部显隐；不同动作不要混用。</li>
 </ol>
-<p>Apple 的功能键说明见<a href="https://support.apple.com/zh-cn/102439">如何使用 Mac
-上的功能键</a>。</p>
-<p><strong>边界：</strong>
-按键映射和冲突受系统、键盘及其他应用影响，轻栈不会自动改写系统功能键设置。关闭项可恢复不等于所有贴图都会跨重启保留；后者需要明确开启记住功能。</p>
-<p><a id="remember-folder"></a> ## 9.
-已勾选“记住此目录”，重启后为什么还要重新选择？</p>
-<p><strong>现象：</strong>
-文件扫描目录显示不可用，或提示目录移动、身份改变、无权限。</p>
+<p>Apple 的功能键说明见<a href="https://support.apple.com/zh-cn/102439">如何使用 Mac 上的功能键</a>。</p>
+<p><strong>边界：</strong> 按键映射和冲突受系统、键盘及其他应用影响，轻栈不会自动改写系统功能键设置。关闭项可恢复不等于所有贴图都会跨重启保留；后者需要明确开启记住功能。</p>
+<p><a id="remember-folder"></a></p>
+<h2 id="section-12">9. 已勾选“记住此目录”，重启后为什么还要重新选择？</h2>
+<p><strong>现象：</strong> 文件扫描目录显示不可用，或提示目录移动、身份改变、无权限。</p>
 <p><strong>排查与操作：</strong></p>
-<ol type="1">
+<ol>
 <li>在文件搜索中打开“管理目录”，查看该项的具体原因。</li>
 <li>找到现在希望扫描的目录，重新通过系统目录选择器选择。希望下次仍保留这个选择时，再明确勾选“记住此目录”；勾选默认关闭，只作用于下一次选择。</li>
 <li>不再需要的旧项可明确移除。移除会停止扫描并失效当前结果，不删除目录中的文件。</li>
 </ol>
-<p><strong>边界：</strong> 记住的是普通系统 bookmark
-和应用内选择，不是新增或永久保留 macOS
-系统权限。重启仍会核对原位置、目录身份、链接边界和当前访问；移动、替换、失效或不可访问时不会自动跟随到其他位置。保存或移除记录失败时，以界面的错误为准，不能当作已经记住或已经清除；若提示重启可能恢复，请重试移除。</p>
-<p><a id="clipboard"></a> ## 10. 剪贴板页面为什么没有自动出现历史？</p>
+<p><strong>边界：</strong> 记住的是普通系统 bookmark 和应用内选择，不是新增或永久保留 macOS 系统权限。重启仍会核对原位置、目录身份、链接边界和当前访问；移动、替换、失效或不可访问时不会自动跟随到其他位置。保存或移除记录失败时，以界面的错误为准，不能当作已经记住或已经清除；若提示重启可能恢复，请重试移除。</p>
+<p><a id="clipboard"></a></p>
+<h2 id="section-13">10. 剪贴板页面为什么没有自动出现历史？</h2>
 <p><strong>现象：</strong> 已复制文字，历史列表仍为空。</p>
 <p><strong>排查与操作：</strong></p>
-<ol type="1">
+<ol>
 <li>从主窗口打开“剪贴板”，查看自动采集开关；新配置默认关闭。</li>
 <li>需要记录后续文字时，由你明确开启，再复制一段不含隐私的测试文字，并检查搜索、筛选条件。</li>
 <li>仍未出现时，查看保留数量、保留时间、敏感内容过滤和排除应用设置。只想保存常用文字，也可以手动新增片段。</li>
 </ol>
-<p><strong>边界：</strong>
-当前是文本历史，不提供图片或文件剪贴板历史。开启采集不会找回开启前已经错过的内容；是否落盘及保留策略以面板设置为准。排查时不要提交真实密码、验证码或私密剪贴板内容。</p>
-<p><a id="remember-pins"></a> ## 11.
-贴图重启后没有恢复；遮挡后的内容还会保存吗？</p>
-<p><strong>现象：</strong>
-当前能贴图，退出后重新打开却没有恢复；或希望保存带标注的贴图。</p>
+<p><strong>边界：</strong> 当前是文本历史，不提供图片或文件剪贴板历史。开启采集不会找回开启前已经错过的内容；是否落盘及保留策略以面板设置为准。排查时不要提交真实密码、验证码或私密剪贴板内容。</p>
+<p><a id="remember-pins"></a></p>
+<h2 id="section-14">11. 贴图重启后没有恢复；遮挡后的内容还会保存吗？</h2>
+<p><strong>现象：</strong> 当前能贴图，退出后重新打开却没有恢复；或希望保存带标注的贴图。</p>
 <p><strong>排查与操作：</strong></p>
-<ol type="1">
-<li>打开“贴图与截图设置 →
-贴图管理”，检查“记住贴图”。新配置默认不保存；需要恢复时明确开启。</li>
+<ol>
+<li>打开“贴图与截图设置 → 贴图管理”，检查“记住贴图”。新配置默认不保存；需要恢复时明确开启。</li>
 <li>查看是否有超限、图像无效或保存/恢复失败提示。当前上限为3项、64MiB，包含解码预算；出错时不能假定已经记住。</li>
 <li>不再需要本机恢复记录时，关闭记住或清除记录；当前窗口会保留。管理区的关闭操作还会移除对应恢复记录。</li>
 </ol>
-<p><strong>隐私边界：</strong>
-记住贴图会保存<strong>原图或原始文字、可编辑标注及视图状态</strong>。遮挡、马赛克等可编辑效果不能当作已删除原始敏感信息。需要分享时，使用最终合成图的复制/导出结果，并核对输出；模糊和马赛克不保证去除可识别信息，敏感内容优先采用实色遮挡。不要把贴图恢复数据当作脱敏文件分享。关闭恢复记录不会清除系统剪贴板或你已经另存、复制、发送的文件。</p>
-<p><strong>验证边界：</strong>
-已有实现和合成测试不等于所有真实重启恢复、多 Space
-和权限环境均已验收。</p>
-<p><a id="capture-session"></a> ## 12.
-截图历史、快捷保存目录为什么在重启后消失？</p>
-<p><strong>现象：</strong>
-上次的截图记录不见了，保存时又出现位置选择面板。</p>
-<p><strong>排查与操作：</strong>
-在“贴图与截图设置”展开“本次截图记录与保存位置”。本次需要历史时开启“保留本次截图记录”；需要直接保存时，重新选择本次运行的快捷保存目录。</p>
-<p><strong>边界：</strong>
-这是设计行为：截图历史默认关闭，只在当前进程内存中保留成功导出的最终
-PNG，最多8张／32MiB；清空、关闭或退出即释放。快捷保存目录也仅当前运行有效，失效时需重选或清除。它们与会写入本机恢复数据的“记住贴图”是不同选项。快捷保存使用新文件名，不覆盖既有文件；普通保存面板遇同名文件仍需你确认是否替换。</p>
-<p><a id="plugins"></a> ## 13. 插件安装成功却不能运行，或者提示 WASM
-未开启</p>
-<p><strong>现象：</strong>
-插件已出现在列表中，主搜索却没有可运行命令；点击命令提示需要启用或授权。</p>
+<p><strong>隐私边界：</strong> 记住贴图会保存<strong>原图或原始文字、可编辑标注及视图状态</strong>。遮挡、马赛克等可编辑效果不能当作已删除原始敏感信息。需要分享时，使用最终合成图的复制/导出结果，并核对输出；模糊和马赛克不保证去除可识别信息，敏感内容优先采用实色遮挡。不要把贴图恢复数据当作脱敏文件分享。关闭恢复记录不会清除系统剪贴板或你已经另存、复制、发送的文件。</p>
+<p><strong>验证边界：</strong> 已有实现和合成测试不等于所有真实重启恢复、多 Space 和权限环境均已验收。</p>
+<p><a id="capture-session"></a></p>
+<h2 id="section-15">12. 截图历史、快捷保存目录为什么在重启后消失？</h2>
+<p><strong>现象：</strong> 上次的截图记录不见了，保存时又出现位置选择面板。</p>
+<p><strong>排查与操作：</strong> 在“贴图与截图设置”展开“本次截图记录与保存位置”。本次需要历史时开启“保留本次截图记录”；需要直接保存时，重新选择本次运行的快捷保存目录。</p>
+<p><strong>边界：</strong> 这是设计行为：截图历史默认关闭，只在当前进程内存中保留成功导出的最终 PNG，最多8张／32MiB；清空、关闭或退出即释放。快捷保存目录也仅当前运行有效，失效时需重选或清除。它们与会写入本机恢复数据的“记住贴图”是不同选项。快捷保存使用新文件名，不覆盖既有文件；普通保存面板遇同名文件仍需你确认是否替换。</p>
+<p><a id="plugins"></a></p>
+<h2 id="section-16">13. 插件安装成功却不能运行，或者提示 WASM 未开启</h2>
+<p><strong>现象：</strong> 插件已出现在列表中，主搜索却没有可运行命令；点击命令提示需要启用或授权。</p>
 <p><strong>排查与操作：</strong></p>
-<ol type="1">
+<ol>
 <li>打开“插件”，找到该插件并核对身份、版本和权限。新安装、来源更新或回退后默认停用，需要单独启用。</li>
 <li>按具体命令的需要选择本次授权或记住授权；不需要的权限不要批准。</li>
-<li>WASM 插件还需要先审阅并确认开启 WASM
-产品开关。能力编入默认构建，不等于运行开关已开启。</li>
+<li>WASM 插件还需要先审阅并确认开启 WASM 产品开关。能力编入默认构建，不等于运行开关已开启。</li>
 <li>如果提示来源撤销、信任变化或来源已移除，按来源页说明处理；不要把原包改作本地安装来规避来源约束。</li>
 </ol>
-<p><strong>边界：</strong> WASM 不是任意 Node、网页或 shell
-插件兼容层。插件来源没有默认地址或后台更新，只有用户主动操作才检查或下载；签名证明来源及完整性，不证明内容一定无害。恢复应用备份后可能需要重新主动检查来源；当前来源信任不可读时，需要重新确认，旧备份不会自动获得信任。</p>
-<p><a id="ci"></a> ## 14. GitHub Actions 显示失败，还能从哪里安装？</p>
-<p><strong>现象：</strong> 仓库的 Actions
-页面出现红色失败状态，或找不到其中的安装包。</p>
-<p><strong>排查：</strong> 截至本说明更新时，远程 CI
-存在未通过的检查；具体状态和原因以对应提交的 Actions
-运行日志为准。不能用本机检查通过替代远程 CI 通过。</p>
+<p><strong>边界：</strong> WASM 不是任意 Node、网页或 shell 插件兼容层。插件来源没有默认地址或后台更新，只有用户主动操作才检查或下载；签名证明来源及完整性，不证明内容一定无害。恢复应用备份后可能需要重新主动检查来源；当前来源信任不可读时，需要重新确认，旧备份不会自动获得信任。</p>
+<p><a id="ci"></a></p>
+<h2 id="section-17">14. GitHub Actions 显示失败，还能从哪里安装？</h2>
+<p><strong>现象：</strong> 仓库的 Actions 页面出现红色失败状态，或找不到其中的安装包。</p>
+<p><strong>排查：</strong> 截至本说明更新时，远程 CI 存在未通过的检查；具体状态和原因以对应提交的 Actions 运行日志为准。不能用本机检查通过替代远程 CI 通过。</p>
 <p><strong>操作：</strong></p>
 <ul>
-<li>普通使用者：从<a href="https://github.com/SleepyBytepp/pinoradesk-downloads/blob/codex/download-site/README.md">首页</a>明确提供的应用下载入口，核对版本及芯片类型；不要将失败任务的日志或源码
-ZIP 当作安装包。</li>
-<li>开发者：打开失败的任务，先查看第一个实际报错步骤，并记录对应提交和运行链接；区分依赖安装、编译、测试等失败，再按私有源码开发说明（需维护者授权）复现。</li>
+<li>普通使用者：从<a href="https://github.com/SleepyBytepp/pinoradesk-downloads">首页</a>明确提供的应用下载入口，核对版本及芯片类型；不要将失败任务的日志或源码 ZIP 当作安装包。</li>
+<li>开发者：打开失败的任务，先查看第一个实际报错步骤，并记录对应提交和运行链接；区分依赖安装、编译、测试等失败，向维护者提供失败步骤、对应提交和运行链接；使用指南不包含私有源码构建步骤。</li>
 </ul>
-<p><strong>边界：</strong>
-源码仓库当前CI配置执行源码检查、测试和不打安装包的原生构建，没有安装器上传或自动发布步骤。CI
-失败不等于一个独立下载附件已经被证明损坏；CI
-成功也不能单独证明应用已公证、安装升级已验收或 Windows
-全部功能可用。</p>
-<p><a id="report"></a> ## 15. 反馈问题时提供什么？</p>
-<p>请提供应用版本、Mac 芯片类型、macOS
-版本、操作入口、最短复现步骤、完整错误文字，以及是否真正退出重开、是否运行同一应用副本。CI
-问题可附运行链接和对应提交。</p>
-<p>截图、日志只保留与问题相关的部分，并遮去个人路径和内容。不要上传密码、访问令牌、签名配置/私钥、完整应用数据库、原始贴图或私密剪贴板内容。当前未实现项和未验收场景请先查看<a href="https://github.com/SleepyBytepp/pinoradesk-downloads/blob/codex/download-site/docs/VERIFICATION_0.2.0.md">验证范围</a>，避免把已知功能缺项当作权限故障处理。</p>
-</body>
-</html>
+<p><strong>边界：</strong> 自动化检查与发布应用附件是不同交付步骤。CI 失败不等于一个独立下载附件已经被证明损坏；CI 成功也不能单独证明应用已公证、安装升级已验收或 Windows 全部功能可用。</p>
+<p><a id="report"></a></p>
+<h2 id="section-18">15. 反馈问题时提供什么？</h2>
+<p>请提供应用版本、Mac 芯片类型、macOS 版本、操作入口、最短复现步骤、完整错误文字，以及是否真正退出重开、是否运行同一应用副本。CI 问题可附运行链接和对应提交。</p>
+<p>截图、日志只保留与问题相关的部分，并遮去个人路径和内容。不要上传密码、访问令牌、签名配置/私钥、完整应用数据库、原始贴图或私密剪贴板内容。当前未实现项和未验收场景请先查看<a href="https://github.com/SleepyBytepp/pinoradesk-downloads/blob/release/download-site/docs/VERIFICATION_0.2.0.md">验证范围</a>，避免把已知功能缺项当作权限故障处理。</p>
+<p><a id="local-iteration"></a></p>
+<h2 id="section-19">16. 新版功能在哪里，为什么线上下载名字仍很长？</h2>
+<p><code>v0.2.0-preview.2</code> 的功能范围包括 JSON 大工作区／全局查询／行号与折叠、大文件处理、截图辅助线、实体跨屏连续拖选及贴图增强。请查看<a href="https://github.com/SleepyBytepp/pinoradesk-downloads/blob/release/download-site/docs/RELEASE_NOTES_0.2.0-preview.2.zh-CN.md">本版更新</a>与对应版本附件；preview.1 历史资料和旧附件保留，不代表新版本能力。</p>
+<p>本版本使用短文件名 <strong><a href="https://github.com/SleepyBytepp/pinoradesk-downloads/releases/download/v0.2.0-preview.2/PinoraDesk.dmg">PinoraDesk.dmg</a></strong>、<strong><a href="https://github.com/SleepyBytepp/pinoradesk-downloads/releases/download/v0.2.0-preview.2/PinoraDesk.zip">PinoraDesk.zip</a></strong>。版本、ARM64 架构与摘要以同一版本页资料为准。历史附件可能沿用长名称。若 preview.2 版本或附件尚未出现，请等待页面更新；不要把旧包改名当作新版本。</p>
+<p><a id="pin-color"></a></p>
+<h2 id="section-20">17. 贴图取色没有出现，或颜色与桌面不同？</h2>
+<p>先确认打开的是 v0.2.0-preview.2 对应应用，并且当前是图片贴图；文字贴图不提供图像取色。</p>
+<ul>
+<li>在图片上按住 Option（Alt）并移动鼠标，查看放大、HEX 和 RGB；按 C 或单击图像复制颜色，松开 Option 返回。</li>
+<li>右键“取色与放大”可持续查看；按 Esc 退出取色模式，先不会关闭贴图。</li>
+<li>标注、文字识别或其他操作面板打开时，先结束对应操作，再进入取色。</li>
+<li>采样来自最终合成图，包含遮挡和马赛克；透明像素按白底合成，不包含系统窗口透明度和桌面背景。它不是屏幕级颜色测量。</li>
+<li>取色不触发新的截图或屏幕录制授权；贴图已经关闭或复制失败时会明确提示，不会假称已复制。</li>
+</ul>
+<p><a id="capture-history-navigation"></a></p>
+<h2 id="section-21">18. 按逗号／句号为什么没有切换截图历史？</h2>
+<p>先确认使用 v0.2.0-preview.2 对应应用，并在“贴图与截图设置”主动开启“保留本次截图记录”。它默认关闭，只保留本次运行中成功导出的最终 PNG；应用退出后不保留。单纯进入截图或打印不会新增一条记录。</p>
+<p>在截图选区中按逗号 <code>,</code> 看较早一张，按句号 <code>.</code> 看较新一张，直到回到这次新截图；也可使用 <code>‹</code>／<code>›</code> 按钮（上一张／下一张）。输入框内的标点仍用于输入文字。</p>
+<p>若提示有标注或识别内容，先松开鼠标、复制／保存需要的编辑，按 <code>Command+Shift+Z</code> 清除标注，或收起文字识别，再切换。应用不会为回看直接丢弃标注、可撤销的标注或识别结果。无记录、到达边界或被阻止时仅提示，不取消当前 OCR。</p>
+<p>清空或关闭历史会使旧历史视图失效；随后到达的导出／识别结果会重新校验。已写入文件、剪贴板，或交给系统打印预览的图像不能通过清空历史撤回。当前验证与未验收项见<a href="https://github.com/SleepyBytepp/pinoradesk-downloads/blob/release/download-site/docs/VERIFICATION_0.2.0.md">阶段记录</a>。</p>
+<p><a id="capture-print"></a></p>
+<h2 id="section-22">19. 如何打印？取消后编辑还在吗？“任务已提交”算打印完成吗？</h2>
+<p>在 Mac 预发布版本的截图选区、主窗口图片编辑器点击“打印”或按 <code>Command+P</code>；贴图可用右键“打印…”或同一快捷键。主窗口图片编辑器原先的贴图快捷键改为 <code>Command+T</code>，截图选区也支持该组合。若仍在拖框或绘制一笔标注，请先松开鼠标。</p>
+<p>正常 macOS 打印面板会显示最终裁剪、标注、遮挡、旋转／翻转后的合成图；在系统面板选择打印机及纸张并确认，应用不会自动发送打印任务。正常取消保留编辑，不结束选区或关闭贴图；打印不会新增截图历史。面板前源图已失效会拒绝操作，源窗口被关闭时也不会恢复旧窗。</p>
+<p>“打印任务已提交”表示系统接受了该次操作，<strong>不代表打印机已出纸</strong>。看到“已取消打印或打印未完成，请检查系统提示”时查看系统面板或打印队列；已提交但窗口未能恢复的提示也不代表需要重复打印。真实打印机、驱动与纸张输出尚未实测，本阶段采用合成界面、动作边界及生命周期测试，不能替代实际打印验收。</p>
+<p><a id="capture-desktop"></a></p>
+<h2 id="section-23">20. 如何跨屏截图，为什么所有屏幕缩在一个总览里？</h2>
+<p>搜索“跨屏总览”，或点“贴图与截图设置 → 跨屏总览截图”，直接在当前屏幕显示的合并图中框选，不必先进入另一页再点区域按钮。总览按桌面排列显示屏幕，虚线与尺寸说明不写进导出图；可跨越多个屏幕及其间隙选取一个矩形。普通“截图”在单屏直接拖框，在 2–4 屏时进入实体连续拖选。</p>
+<p>“跨屏总览”是在单个屏幕上操作合并图；新增“截图”／“跨屏截图”入口支持实体屏幕之间连续拖选，最多 4 屏，真实硬件验收仍待完成。不同像素密度统一到一个输出比例；为保持流畅，整体限制在1000万像素，需要缩小时显示比例。PNG保留无屏幕区域的透明间隙，JPEG转白底；镜像副屏只处理一次。多个屏幕分别取帧，动态内容可能有时间差，不保证帧同步。</p>
+<p>若拔插显示器、改变布局／旋转／缩放后提示图像失效，请Esc退出后重新截图；不会把旧布局的坐标套到新桌面。R只恢复仍匹配当前桌面与输出比例的区域。真实多屏和混合DPI矩阵尚未实测，范围见<a href="https://github.com/SleepyBytepp/pinoradesk-downloads/blob/release/download-site/docs/VERIFICATION_0.2.0.md">本阶段记录</a>。</p>
+<p><a id="capture-cursor"></a></p>
+<h2 id="section-24">21. 如何在截图中显示鼠标指针？为什么开启后有时没有？</h2>
+<p>进入“贴图与截图设置 → 截图选项、记录与保存位置”，主动开启“截图包含鼠标指针”。新配置默认关闭，修改保存后在下次屏幕截图生效，不改当前已经冻结的图像；保存失败会提示并保留原设置。</p>
+<p>跨屏总览只在捕获开始时锚定的屏幕请求指针，避免多个屏幕重复捕获；若指针在取帧期间移出这块屏幕，可能不出现在结果中。它不移动系统光标、不更改录屏权限；实际指针样式、跨屏移动和硬件表现仍待实机验证。剪贴板导入或历史图不会因开启选项而补画当前鼠标。</p>
+<h2 id="section-25">22. 怎样从一块屏幕拖到另一块屏幕？</h2>
+<p>Mac 预发布版直接点“截图”或按截图快捷键，在2–4屏时会分别显示对应画面。按住鼠标跨过屏幕边缘，松手后使用当前屏幕的工具栏，Enter复制、Esc取消。超过4屏请搜索“跨屏总览”。截图仍需要正常录屏授权；不必修改系统Spaces设置。</p>
+<p>如果显示器连接、排列或缩放发生变化，请退出本次截图后重新开始，不沿用旧选区。个别覆盖层加载失败或重新载入时，会统一退出，避免留下黑屏。当前连续拖选实现已接入，实际设备、独立Spaces和混合DPI的完整验收仍待完成，详见<a href="https://github.com/SleepyBytepp/pinoradesk-downloads/blob/release/download-site/docs/VERIFICATION_0.2.0.md">本阶段记录</a>。历史 preview.1 附件不包含全部 preview.2 增强。</p>
+<h2 id="section-26">JSON 查询栏和窗口拖动</h2>
+<p>JSON 查询不再区分Key与Value，查询栏固定在内容上方。行号旁的箭头可折叠／展开；文本可专注查看，文件可专注预览。展开窗口增加显示空间，字号单独调整。</p>
+<p>系统标题栏和下方品牌栏空白均可按住鼠标左键拖动；按钮、搜索输入和可选文字区域保持原有操作。如果首次拖动仍不响应，请说明是在系统标题栏还是品牌栏、窗口是否已获得焦点。品牌栏空白基本拖动已由用户实测确认；后台首按、20 轮连续拖动及多屏／全屏矩阵仍未全部验收。</p>
+</article><footer class="doc-footer">轻栈 PinoraDesk · v0.2.0-preview.2 · 本地优先的 Mac 效率工具<br>所有界面图均为合成示例。使用者不需要安装开发环境；公开下载资料不包含应用实现源码。</footer></main></body></html>

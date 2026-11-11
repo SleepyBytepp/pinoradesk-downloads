@@ -1,25 +1,27 @@
 # 安装轻栈 Mac 开发预览版
 
-版本标签：`v0.2.0-preview.1`；应用内版本：`0.2.0`。
+版本标签：`v0.2.0-preview.2`；应用内版本：`0.2.0`。
+
+应用附件使用简短文件名 `PinoraDesk.dmg` / `PinoraDesk.zip`。版本及ARM64架构写在本页和校验资料中；请使用同一版本页中的附件与SHA-256校验文件。
 
 ## 选择正确文件
 
 - 只提供 **Apple Silicon / M系列 Mac，ARM64** 应用。
 - 配置目标为macOS14及以上；本机已验证macOS15.2 ARM64，其他版本仍待实测。
 - Intel Mac和Windows暂未提供安装包。
-- 从[版本页](https://github.com/SleepyBytepp/pinoradesk-downloads/releases/tag/v0.2.0-preview.1)下载DMG或应用ZIP，不要将`Source code`或`Code → Download ZIP`当成应用。
+- 从[版本页](https://github.com/SleepyBytepp/pinoradesk-downloads/releases/tag/v0.2.0-preview.2)下载DMG或应用ZIP，不要将`Source code`或`Code → Download ZIP`当成应用。
 - 应用由独立公开下载仓库提供，无需源码仓库权限。[下载链接或404排查](FAQ.zh-CN.md#download)。
 
 ## 使用DMG安装
 
-1. 下载`PinoraDesk-0.2.0-preview.1-macos-arm64.dmg`，双击打开。
+1. 下载 DMG，双击打开；附件名为 `PinoraDesk.dmg`。
 2. 把`PinoraDesk.app`拖到`Applications`，或拷贝到自己的“应用程序”目录。
 3. 弹出磁盘映像，从“应用程序”打开轻栈；后续一直运行这一份副本。
 4. 如果已有旧版在运行，先用轻栈菜单“退出轻栈”，再替换同一位置的应用；不要一边运行一边覆盖。
 
 ## 使用ZIP安装
 
-1. 下载`PinoraDesk-0.2.0-preview.1-macos-arm64.zip`并完整解压。
+1. 下载应用 ZIP 并完整解压；附件名为 `PinoraDesk.zip`。
 2. 找到`PinoraDesk.app`，放入“应用程序”后打开。
 3. 随包说明、许可资料可另行保留；无需把整个工程、Node、Rust或编译缓存一起安装。
 
@@ -37,10 +39,10 @@
 
 ## 文件完整性
 
-同一版本页提供`SHA256SUMS.txt`。可在终端中对下载文件计算SHA-256，与校验文件相应一行比较，例如：
+同一版本页提供`SHA256SUMS.txt`。可在终端中对下载文件计算SHA-256，与校验文件相应一行比较，以下以本版本短文件名为例；校验历史版本时使用实际下载文件名：
 
 ```sh
-LC_ALL=C /usr/bin/shasum -a 256 PinoraDesk-0.2.0-preview.1-macos-arm64.dmg
+LC_ALL=C /usr/bin/shasum -a 256 PinoraDesk.dmg
 ```
 
 校验一致仅说明文件与发布附件一致，不等于Apple公证或没有软件缺陷。若不一致，停止使用该下载副本并重新下载。
@@ -53,6 +55,6 @@ LC_ALL=C /usr/bin/shasum -a 256 PinoraDesk-0.2.0-preview.1-macos-arm64.dmg
 
 ## 已知范围
 
-这不是已完成正式发行验收的稳定版。CI仍有Mac本地HTTPS夹具超时和Windows Rust lint问题；真实多屏、多Space、权限撤回、安装升级等矩阵未全部验收。应用包只在本机封装/解包/签名完整性层面核对，跨机器下载后的首次Gatekeeper与权限流程仍需实测。
+这不是已完成正式发行验收的稳定版。历史远程CI记录仍包含Mac本地HTTPS夹具超时和Windows Rust lint失败；Mac夹具已在本地修复并回归，远程CI尚未重跑。Windows工作按用户要求暂停；真实多屏、多Space、权限撤回、安装升级等矩阵未全部验收。应用包只在本机封装/解包/签名完整性层面核对，跨机器下载后的首次Gatekeeper与权限流程仍需实测。
 
 [完整功能手册](USER_GUIDE.zh-CN.md) · [常见问题](FAQ.zh-CN.md) · [验证边界](VERIFICATION_0.2.0.md)
