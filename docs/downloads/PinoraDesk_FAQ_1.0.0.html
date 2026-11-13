@@ -1,0 +1,46 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="轻栈 PinoraDesk Mac 1.0.0使用指南，含JSON、截图、贴图、文件与插件操作及问题排查"><title>轻栈 PinoraDesk 常见问题 · v1.0.0</title><style>
+@page{size:A4;margin:18mm 17mm 20mm}*{box-sizing:border-box}html{font-size:14px}body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC",sans-serif;color:#24392d;background:#eef2ec;line-height:1.7;margin:0}.paper{max-width:980px;margin:28px auto;background:#fff;padding:48px 58px;box-shadow:0 3px 18px #20382116}h1,h2,h3,h4{color:#294c38;line-height:1.35;break-after:avoid-page}h1{font-size:30px;border-bottom:3px solid #416b4f;padding-bottom:14px}h2{font-size:22px;margin-top:30px;padding-top:8px;border-top:1px solid #d6e1d5}h3{font-size:17px;margin-top:24px}h4{font-size:15px}p{margin:10px 0}a{color:#316e50;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}a:hover{color:#17472c}ul,ol{padding-left:1.7em}li{margin:4px 0}li::marker{color:#4f6e57}strong{font-weight:650}table{width:100%;border-collapse:collapse;font-size:12px;table-layout:auto;margin:16px 0}th,td{border:1px solid #d6e1d5;text-align:left;padding:7px 9px;vertical-align:top;overflow-wrap:anywhere}th{background:#eaf1e8;color:#2e5239;font-weight:650}tbody tr:nth-child(even){background:#f7f9f5}thead{display:table-header-group}tr{break-inside:avoid-page}blockquote{margin:16px 0;padding:10px 15px;border-left:4px solid #6c9573;background:#eff5eb;color:#3b5541}blockquote p{margin:4px 0}pre{background:#f0f4ee;border:1px solid #d8e2d5;border-radius:6px;padding:12px 14px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:11px;line-height:1.6;break-inside:avoid-page}code{font-family:"SFMono-Regular",Menlo,monospace;font-size:.92em;background:#eff3ed;border-radius:3px;padding:1px 3px;overflow-wrap:anywhere}pre code{padding:0;background:none}img{display:block;max-width:100%;height:auto;border:1px solid #d6e1d5;border-radius:8px;margin:18px auto;break-inside:avoid-page}.edition{font-size:12px;color:#667a6a;letter-spacing:.04em}.download-links{padding:15px 18px;background:#e8f0e5;border-radius:8px;font-size:13px}.download-links a{margin-right:14px}.toc{margin:24px 0;padding:18px;background:#f5f8f2;border:1px solid #d6e1d5;border-radius:8px}.toc h2{border:0;padding:0;margin:0 0 8px;font-size:18px}.toc ol{columns:2;margin:0;padding-left:0;list-style:none;font-size:13px}.toc li{break-inside:avoid}.print-button{position:fixed;right:18px;top:14px;padding:9px 14px;border:0;border-radius:7px;background:#385d42;color:#fff;font:inherit;cursor:pointer}.section-body p,.section-body li{orphans:3;widows:3}.section-body p:has(>strong:only-child){break-after:avoid-page}.note{font-size:12px;color:#5d7161}.doc-footer{margin-top:30px;padding-top:14px;border-top:1px solid #d6e1d5;font-size:12px;color:#627566}@media(max-width:700px){.paper{padding:28px 20px;margin:0}.toc ol{columns:1}.print-button{position:static;margin:12px}table{font-size:11px}h1{font-size:25px}}@media print{html{font-size:10.3pt}body{background:#fff;line-height:1.64}.paper{max-width:none;margin:0;padding:0;box-shadow:none}.print-button{display:none}h1{font-size:24pt}h2{font-size:16pt;margin-top:19pt}h3{font-size:12pt;margin-top:16pt}h4{font-size:10.7pt}p{margin:7pt 0}table{font-size:8.5pt}th,td{padding:5pt 6pt}a{color:inherit;text-decoration:none}img{max-height:155mm;object-fit:contain}.toc{break-inside:avoid-page}.toc ol{font-size:9pt}.download-links{break-inside:avoid-page}.doc-footer{font-size:8.5pt}blockquote{break-inside:avoid-page}pre{font-size:8.5pt}code{font-size:.9em}}
+</style></head><body><button class="print-button" onclick="window.print()">打印 / 保存 PDF</button><main class="paper"><div class="edition">PINORADESK · 轻栈 &nbsp; / &nbsp; MAC 1.0.0 v1.0.0 &nbsp; / &nbsp; 2026-11-13</div><div class="download-links"><strong>Apple Silicon Mac</strong> · <a href="https://github.com/SleepyBytepp/pinoradesk-downloads/releases/download/v1.0.0/PinoraDesk.dmg">下载 DMG</a><a href="https://github.com/SleepyBytepp/pinoradesk-downloads/releases/download/v1.0.0/PinoraDesk.zip">下载 ZIP</a><a href="https://github.com/SleepyBytepp/pinoradesk-downloads/releases/tag/v1.0.0">版本页与校验文件</a><p class="note">本文件可离线阅读。下载附件是否可用以版本页实际状态为准；尚未公证，Windows 暂停。</p></div><nav class="toc" aria-label="目录"><h2>阅读目录</h2><ol><li><a href="#section-2">1. 下载后没有App，只有源码或docs？</a></li><li><a href="#section-3">2. Intel或Windows能安装吗？</a></li><li><a href="#section-4">3. 提示开发者无法验证或应用损坏？</a></li><li><a href="#section-5">4. 快捷键没有反应或唤起了uTools？</a></li><li><a href="#section-6">5. 退出后按快捷键没有反应？</a></li><li><a href="#section-7">6. 窗口一切换到其他应用就消失？</a></li><li><a href="#section-8">7. 截图提示没有屏幕录制权限？</a></li><li><a href="#section-9">8. 截图黑屏、选区不对或跨屏异常？</a></li><li><a href="#section-10">9. 长截图接缝重复或缺了一段？</a></li><li><a href="#section-11">10. 贴图不能拖动或关闭后恢复不了？</a></li><li><a href="#section-12">11. JSON框太小、查不到Key或Value？</a></li><li><a href="#section-13">12. 100MiB文件为什么不能直接粘贴？</a></li><li><a href="#section-14">13. 文件正文没有结果或只显示部分结果？</a></li><li><a href="#section-15">14. 图片／文件剪贴板历史没保存？</a></li><li><a href="#section-16">15. 时间戳换时区为什么数字没变？</a></li><li><a href="#section-17">16. 插件安装了不能运行？</a></li><li><a href="#section-18">17. 迁移失败或想撤回导入？</a></li><li><a href="#section-19">18. 检查更新显示尚未配置？</a></li><li><a href="#section-20">19. 卸载会删除数据吗？</a></li><li><a href="#section-21">20. 如何反馈问题？</a></li></ol></nav><article class="section-body"><h1 id="section-1">轻栈 PinoraDesk 1.0.0 常见问题</h1>
+<p>更新日期：2026-11-13。适用Apple Silicon Mac。请先核对运行版本，再按对应问题处理。</p>
+<h2 id="section-2">1. 下载后没有App，只有源码或docs？</h2>
+<p>下载了GitHub的Source code或仓库ZIP。到<a href="https://github.com/SleepyBytepp/pinoradesk-downloads/releases/tag/v1.0.0">1.0.0版本页</a>选择PinoraDesk.dmg或PinoraDesk.zip，完整解压。公开仓库只放发行资料，私有源码不在其中。</p>
+<h2 id="section-3">2. Intel或Windows能安装吗？</h2>
+<p>本版只有Mac ARM64包，适合M系列芯片。Intel没有单独构建，Windows暂停，不能用改名或模拟通过来代替对应安装包验证。</p>
+<h2 id="section-4">3. 提示开发者无法验证或应用损坏？</h2>
+<p>当前使用本地开发签名，未经Apple公证。先核对官方版本页和SHA256SUMS。普通开发者验证提示可按系统提供的“隐私与安全性 → 仍要打开”等单应用流程处理；系统不提供该入口或设备受管理时遵循系统／管理员要求。</p>
+<p>恶意软件或“已损坏”提示不能直接当普通开发者提示跳过。停止使用该副本，重新核对下载并反馈原始提示。不要关闭整机安全检查、盲目移除隔离标记或导入未知证书。</p>
+<h2 id="section-5">4. 快捷键没有反应或唤起了uTools？</h2>
+<p>先确认轻栈正在运行。首次默认Option+Space，已保存设置优先。进入设置改为独立组合，例如Control+Option+Space，保存后再试。截图键及F3也可能与系统功能键冲突；Mac可尝试Fn+F3或修改组合。</p>
+<h2 id="section-6">5. 退出后按快捷键没有反应？</h2>
+<p>真正退出后没有后台进程接收快捷键，请先从应用程序打开轻栈。窗口×通常只隐藏，菜单栏“退出轻栈”才是真退出。</p>
+<h2 id="section-7">6. 窗口一切换到其他应用就消失？</h2>
+<p>这是默认失焦隐藏。设置中关闭并保存即可。Dock图标、菜单栏或唤起键可恢复窗口。系统标题栏与品牌区空白均可拖动，按钮和输入框不用于拖动。</p>
+<h2 id="section-8">7. 截图提示没有屏幕录制权限？</h2>
+<p>对正在运行的同一份PinoraDesk.app授权。使用系统“屏幕与系统音频录制”设置；若系统要求退出，请从菜单栏真正退出再打开同一份App。不要同时运行下载目录与Applications中的不同副本。不要自行重置其他应用授权；重新编译／换签名的副本可能需要重新授权。</p>
+<h2 id="section-9">8. 截图黑屏、选区不对或跨屏异常？</h2>
+<p>先Esc取消，确认权限和当前显示器状态，再试单屏自由框选。受保护窗口可能无法捕获；多显示器缩放、Spaces与屏幕排列尚未全部实测。不要把系统共享选择器当作自由选区，普通“截图”入口直接拖框。</p>
+<h2 id="section-10">9. 长截图接缝重复或缺了一段？</h2>
+<p>框选时避开固定页头与底部，保持同一窗口和缩放比例，手动滚动后继续采集。动态内容和相似纹理可能误判；调整重叠高度查看接缝预览，再确认，或放弃本段重拍。支持撤销上一段。预览加载失败用“重新加载预览”，不要重复采集同一段。最多20段，不会自动滚动网页。</p>
+<h2 id="section-11">10. 贴图不能拖动或关闭后恢复不了？</h2>
+<p>先检查锁定与穿透设置，必要时用“恢复贴图交互”。隐藏不等于删除，使用隐藏／显示或贴图管理。重启恢复需要事先开启记住贴图；会话内内容不保证跨重启保存。</p>
+<h2 id="section-12">11. JSON框太小、查不到Key或Value？</h2>
+<p>用“铺满工作区”或“专注查看”，调整分隔条与字体。顶部查询固定，默认全局查Key和Value；注意大小写。无效JSON会退回原文搜索并提示。行号和折叠由编辑器提供；大文件只显示当前分段。</p>
+<h2 id="section-13">12. 100MiB文件为什么不能直接粘贴？</h2>
+<p>文本编辑限制1MiB及50,000节点。大文件请用“文件处理”，每份最多256MiB并支持5／10／100／256MiB限制。结构复杂度、临时磁盘及时间预算也有限制；仍是分段查看和编辑，暂不做上百MB全文编辑。错误不会通过静默截断来绕过。</p>
+<h2 id="section-14">13. 文件正文没有结果或只显示部分结果？</h2>
+<p>先选目录并允许本次正文查找。支持UTF-8文本，不支持PDF／Office提取；过滤类型在读取前生效。单文件2MiB，单次64MiB／2000候选、7秒、50匹配，达到限制会提示不完整。缩小范围重试，文件变化后重新查找。</p>
+<h2 id="section-15">14. 图片／文件剪贴板历史没保存？</h2>
+<p>分别开启对应采集开关后才开始记录，只是当前会话有界历史，不跨重启保存。来源应用是推测，不是内容归属保证。文本历史及手工片段使用各自入口。</p>
+<h2 id="section-16">15. 时间戳换时区为什么数字没变？</h2>
+<p>Unix时间戳表示同一时刻，不随时区改变，时区只改变日期显示。日期转时间戳需要明确Z或偏移；工具不会修改系统时钟。当前时间来自设备，没有联网校时。</p>
+<h2 id="section-17">16. 插件安装了不能运行？</h2>
+<p>检查已启用、版本兼容、必要路径绑定及用户授权。WASM默认关闭，需要你主动开启；仍无任意文件／网络／shell能力。uTools商店、Node preload或其他应用私有协议不兼容。来源签名或信任失败时不要绕过。</p>
+<h2 id="section-18">17. 迁移失败或想撤回导入？</h2>
+<p>文件／数据在预览后改变、预览过期或容量超限时重新预览。重复和同名冲突不覆盖。导入前备份失败会保持原数据；备份超过64MiB恢复上限时先整理数据。“恢复导入前的数据”先预览再恢复，整组片段恢复会撤回后续新增／修改。迁移包未加密，不要公开上传。</p>
+<h2 id="section-19">18. 检查更新显示尚未配置？</h2>
+<p>1.0.0客户端流程已实现，但尚未部署真实可信更新清单。不是权限问题，请从<a href="https://github.com/SleepyBytepp/pinoradesk-downloads/releases/tag/v1.0.0">版本页</a>手动下载。未来更新也需主动检查、下载、打开，绝不自动安装。签名、时间或摘要异常时停止，不提供绕过入口。</p>
+<h2 id="section-20">19. 卸载会删除数据吗？</h2>
+<p>删除App不等于清除本机数据。先导出需要保留的手工片段／设置，退出应用后移除App；其他数据请在明确理解用途后使用对应维护入口，不盲删Library目录。</p>
+<h2 id="section-21">20. 如何反馈问题？</h2>
+<p>在<a href="https://github.com/SleepyBytepp/pinoradesk-downloads/issues/new">公开问题页</a>提供1.0.0版本、芯片、系统、重现步骤和脱敏截图／错误。不要上传私人JSON、密码、剪贴板或系统授权数据库。测试通过不代表所有设备已验收，具体范围见<a href="https://github.com/SleepyBytepp/pinoradesk-downloads/blob/release/1.0.0/docs/VERIFICATION_1.0.0.md">验证说明</a>。</p>
+</article><footer class="doc-footer">轻栈 PinoraDesk · v1.0.0 · 本地优先的 Mac 效率工具<br>所有界面图均为合成示例。使用者不需要安装开发环境；公开下载资料不包含应用实现源码。</footer></main></body></html>

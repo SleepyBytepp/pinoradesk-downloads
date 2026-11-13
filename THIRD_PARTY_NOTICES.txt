@@ -1,6 +1,8 @@
 THIRD-PARTY DEPENDENCY AND LICENSE MATERIAL INVENTORY
-PinoraDesk development preview 0.2.0; public preview preparation, not publication authorization.
+PinoraDesk 1.0.0; release preparation, not publication authorization.
 Generated (UTC): 2026-11-05T09:48:40+00:00
+Root version updated to 1.0.0 on 2026-11-13; dependency versions and license texts unchanged.
+Editor supplement verified: 2026-11-12 (Asia/Shanghai)
 This is a factual inventory of locally available dependency declarations and license documents.
 It is not a legal/compliance conclusion, permission to publish, or a claim that all listed build tools ship in the app.
 
@@ -9,17 +11,17 @@ SCOPE AND METHOD
 - Root resolved features: default, plugin-sources, wasm-runtime
 - Include reachable non-root Cargo packages, including build dependencies; the target filter excludes other-platform graph edges.
 - Frontend: actual installed package.json files beneath the local pnpm virtual store, including production, development and transitive packages.
-- Frontend direct production packages: @tauri-apps/api@2.12.3, vue@3.5.44
+- Frontend direct production packages: @codemirror/commands@6.11.1, @codemirror/lang-json@6.0.2, @codemirror/language@6.13.1, @codemirror/state@6.7.6, @codemirror/view@6.43.15, @tauri-apps/api@2.12.3, vue@3.5.44
 - Frontend direct development packages: @tauri-apps/cli@2.12.4, @types/node@24.13.0, @vitejs/plugin-vue@6.0.10, typescript@6.0.3, vite@8.3.5, vue-tsc@3.3.14
 - Include existing standalone LICENSE/LICENCE/COPYING/NOTICE/COPYRIGHT documents and license-directory documents; recognized source/binary extensions are not copied.
 - Cargo license_file declarations are also checked within their installed package. Dependencies are not downloaded or installed.
 - Identical document bytes are stored once, with every package-relative reference retained. SPDX alternatives are preserved without choosing an option.
 - No raw metadata, package source code, private absolute paths or local cache configuration is included. No cargo build, cargo test, package installation, signing or permission change was performed. Official upstream license/metadata documents were fetched read-only over validated TLS for the supplement below.
-- Counts: 389 Rust dependency versions; 56 installed frontend package versions; 700 document references; 292 distinct original document byte sequences.
-- Input SHA-256 src-tauri/Cargo.lock: aeb1cd8dcdc5d50886f7ae757c2eb468230ef7ed2edad9d89aaa575a0ff6b99d
-- Input SHA-256 pnpm-lock.yaml: 0a8c186c918163fdf1b4c27faccbac8c7ee6cd1e60b2c78989316568ce8ab5ca
-- Input SHA-256 src-tauri/Cargo.toml: f23f8c2348b1aba9d7724374fe4358d8f6dadd1b7af25c3d347b24b90babbfb0
-- Input SHA-256 package.json: 3bee705bbfc98a9aa42fc39360d50768c1c0cc4594ea73c1e87e29bfd453861d
+- Counts: 389 Rust dependency versions; 70 installed frontend package versions; 714 document references; 292 original byte sequences plus 7 editor-supplement byte sequences (each section internally deduplicated).
+- Input SHA-256 src-tauri/Cargo.lock: d808b605ea3e4a8a8c0b82cb0a8c4c391cceee0fe613b01248b737634ef3fa8b
+- Input SHA-256 pnpm-lock.yaml: a349caaa07e36ee3a5e530231297d98642087793e77e45d5ac480e8c60141497
+- Input SHA-256 src-tauri/Cargo.toml: 29165309864107b46a545bad0888414b8e807b3867a6fc6f14c4b81cff504940
+- Input SHA-256 package.json: 48e62d3759f277120419e06639ff61babed3a84f203a8bdbede0dfb1f6c14611
 
 INITIAL LOCAL MATERIAL GAPS / DECLARATIONS (BEFORE UPSTREAM SUPPLEMENT)
 Packages with no manifest license declaration: 0
@@ -2151,6 +2153,62 @@ PACKAGE INVENTORY
 [0445] Rust/Cargo | zmij | 1.0.23
   Manifest license: "MIT"
   Document: LICENSE-MIT | T0040 | 1023 original bytes | SHA-256 23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3
+
+[0446] JavaScript/pnpm installed | @codemirror/commands | 6.11.1
+  Manifest license: "MIT"
+  Document: LICENSE | T0293 | 1118 original bytes | SHA-256 05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07
+
+[0447] JavaScript/pnpm installed | @codemirror/lang-json | 6.0.2
+  Manifest license: "MIT"
+  Document: LICENSE | T0293 | 1118 original bytes | SHA-256 05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07
+
+[0448] JavaScript/pnpm installed | @codemirror/language | 6.13.1
+  Manifest license: "MIT"
+  Document: LICENSE | T0293 | 1118 original bytes | SHA-256 05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07
+
+[0449] JavaScript/pnpm installed | @codemirror/state | 6.7.6
+  Manifest license: "MIT"
+  Document: LICENSE | T0293 | 1118 original bytes | SHA-256 05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07
+
+[0450] JavaScript/pnpm installed | @codemirror/streamparser | 6.0.0
+  Manifest license: "MIT"
+  Document: LICENSE | T0293 | 1118 original bytes | SHA-256 05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07
+
+[0451] JavaScript/pnpm installed | @codemirror/view | 6.43.15
+  Manifest license: "MIT"
+  Document: LICENSE | T0293 | 1118 original bytes | SHA-256 05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07
+
+[0452] JavaScript/pnpm installed | @lezer/common | 1.5.5
+  Manifest license: "MIT"
+  Document: LICENSE | T0294 | 1113 original bytes | SHA-256 568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba
+
+[0453] JavaScript/pnpm installed | @lezer/highlight | 1.2.5
+  Manifest license: "MIT"
+  Document: LICENSE | T0294 | 1113 original bytes | SHA-256 568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba
+
+[0454] JavaScript/pnpm installed | @lezer/json | 1.0.3
+  Manifest license: "MIT"
+  Document: LICENSE | T0295 | 1150 original bytes | SHA-256 7e744ae18ef84389d576469a5781172b0d50b7981111109f6da7cbc6b4188288
+
+[0455] JavaScript/pnpm installed | @lezer/lr | 1.4.12
+  Manifest license: "MIT"
+  Document: LICENSE | T0294 | 1113 original bytes | SHA-256 568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba
+
+[0456] JavaScript/pnpm installed | @marijn/find-cluster-break | 1.0.4
+  Manifest license: "MIT"
+  Document: LICENSE | T0296 | 1102 original bytes | SHA-256 9360b00fdd091f05c783b568bdd46c679c41b72415599252de98949462ea1acb
+
+[0457] JavaScript/pnpm installed | crelt | 1.0.7
+  Manifest license: "MIT"
+  Document: LICENSE | T0297 | 1089 original bytes | SHA-256 23852ebf6aef7fadffc92514b3c5df163a8651f2c3ed0dbb494cb49d93bd5de5
+
+[0458] JavaScript/pnpm installed | style-mod | 4.1.4
+  Manifest license: "MIT"
+  Document: LICENSE | T0298 | 1100 original bytes | SHA-256 cb4474e26547397169061d3586c00022cda5330a1b64fa13e872319f3b63aff1
+
+[0459] JavaScript/pnpm installed | w3c-keyname | 2.2.8
+  Manifest license: "MIT"
+  Document: LICENSE | T0299 | 1100 original bytes | SHA-256 869c30f368eb08735e779027b9f4bc9fea2f39624351856aebe42741f0bc0884
 
 ORIGINAL LICENSE / COPYING / NOTICE / COPYRIGHT MATERIALS
 
@@ -26368,3 +26426,196 @@ Exhibit B - "Incompatible With Secondary Licenses" Notice
   This Source Code Form is "Incompatible With Secondary Licenses", as
   defined by the Mozilla Public License, v. 2.0.
 END ORIGINAL UPSTREAM MATERIAL
+
+CODEMIRROR EDITOR DEPENDENCY SUPPLEMENT (2026-11-12)
+14 additional installed package versions; original inventory and upstream supplements retained. No new package has missing local license text. Added license bytes are deduplicated within this supplement.
+
+==============================================================================
+T0293 | SHA-256 05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07 | 1118 original bytes
+Representation: verbatim UTF-8 bytes
+Reference: JavaScript/pnpm installed @codemirror/commands@6.11.1: LICENSE
+BEGIN ORIGINAL MATERIAL
+MIT License
+
+Copyright (C) 2018-2021 by Marijn Haverbeke <marijn@haverbeke.berlin> and others
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+END ORIGINAL MATERIAL
+
+==============================================================================
+T0294 | SHA-256 568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba | 1113 original bytes
+Representation: verbatim UTF-8 bytes
+Reference: JavaScript/pnpm installed @lezer/common@1.5.5: LICENSE
+BEGIN ORIGINAL MATERIAL
+MIT License
+
+Copyright (C) 2018 by Marijn Haverbeke <marijn@haverbeke.berlin> and others
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+END ORIGINAL MATERIAL
+
+==============================================================================
+T0295 | SHA-256 7e744ae18ef84389d576469a5781172b0d50b7981111109f6da7cbc6b4188288 | 1150 original bytes
+Representation: verbatim UTF-8 bytes
+Reference: JavaScript/pnpm installed @lezer/json@1.0.3: LICENSE
+BEGIN ORIGINAL MATERIAL
+MIT License
+
+Copyright (C) 2020 by Marijn Haverbeke <marijn@haverbeke.berlin>, Arun Srinivasan <rulfzid@gmail.com>, and others
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+END ORIGINAL MATERIAL
+
+==============================================================================
+T0296 | SHA-256 9360b00fdd091f05c783b568bdd46c679c41b72415599252de98949462ea1acb | 1102 original bytes
+Representation: verbatim UTF-8 bytes
+Reference: JavaScript/pnpm installed @marijn/find-cluster-break@1.0.4: LICENSE
+BEGIN ORIGINAL MATERIAL
+MIT License
+
+Copyright (C) 2024 by Marijn Haverbeke <marijn@haverbeke.berlin>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+END ORIGINAL MATERIAL
+
+==============================================================================
+T0297 | SHA-256 23852ebf6aef7fadffc92514b3c5df163a8651f2c3ed0dbb494cb49d93bd5de5 | 1089 original bytes
+Representation: verbatim UTF-8 bytes
+Reference: JavaScript/pnpm installed crelt@1.0.7: LICENSE
+BEGIN ORIGINAL MATERIAL
+Copyright (C) 2020 by Marijn Haverbeke <marijn@haverbeke.berlin>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+END ORIGINAL MATERIAL
+
+==============================================================================
+T0298 | SHA-256 cb4474e26547397169061d3586c00022cda5330a1b64fa13e872319f3b63aff1 | 1100 original bytes
+Representation: verbatim UTF-8 bytes
+Reference: JavaScript/pnpm installed style-mod@4.1.4: LICENSE
+BEGIN ORIGINAL MATERIAL
+Copyright (C) 2018 by Marijn Haverbeke <marijn@haverbeke.berlin> and others
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+END ORIGINAL MATERIAL
+
+==============================================================================
+T0299 | SHA-256 869c30f368eb08735e779027b9f4bc9fea2f39624351856aebe42741f0bc0884 | 1100 original bytes
+Representation: verbatim UTF-8 bytes
+Reference: JavaScript/pnpm installed w3c-keyname@2.2.8: LICENSE
+BEGIN ORIGINAL MATERIAL
+Copyright (C) 2016 by Marijn Haverbeke <marijn@haverbeke.berlin> and others
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+END ORIGINAL MATERIAL

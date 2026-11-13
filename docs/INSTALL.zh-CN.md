@@ -1,60 +1,33 @@
-# 安装轻栈 Mac 开发预览版
+# 轻栈 PinoraDesk 1.0.0 安装说明
 
-版本标签：`v0.2.0-preview.2`；应用内版本：`0.2.0`。
+仅Apple Silicon Mac（ARM64），配置macOS14+；本机开发验证为macOS15.2 ARM64。Intel与Windows暂无包。应用内版本1.0.0，标签v1.0.0。
 
-应用附件使用简短文件名 `PinoraDesk.dmg` / `PinoraDesk.zip`。版本及ARM64架构写在本页和校验资料中；请使用同一版本页中的附件与SHA-256校验文件。
+## 下载
 
-## 选择正确文件
+从[版本页](https://github.com/SleepyBytepp/pinoradesk-downloads/releases/tag/v1.0.0)选择[PinoraDesk.dmg](https://github.com/SleepyBytepp/pinoradesk-downloads/releases/download/v1.0.0/PinoraDesk.dmg)或[PinoraDesk.zip](https://github.com/SleepyBytepp/pinoradesk-downloads/releases/download/v1.0.0/PinoraDesk.zip)。自动生成的Source code不是应用。版本和附件未展示时请勿把旧包改名代替。
 
-- 只提供 **Apple Silicon / M系列 Mac，ARM64** 应用。
-- 配置目标为macOS14及以上；本机已验证macOS15.2 ARM64，其他版本仍待实测。
-- Intel Mac和Windows暂未提供安装包。
-- 从[版本页](https://github.com/SleepyBytepp/pinoradesk-downloads/releases/tag/v0.2.0-preview.2)下载DMG或应用ZIP，不要将`Source code`或`Code → Download ZIP`当成应用。
-- 应用由独立公开下载仓库提供，无需源码仓库权限。[下载链接或404排查](FAQ.zh-CN.md#download)。
+## 安装或升级
 
-## 使用DMG安装
+1. 保存正在处理的JSON／图片，并备份需要保留的数据。
+2. 从菜单栏真正退出旧轻栈，关闭窗口仅隐藏，不要覆盖正在运行的App。
+3. DMG中将App拖入Applications；ZIP完整解压后将App放进应用程序。
+4. 打开同一位置的App，检查版本和原有设置。不要同时运行多个目录中的副本。
+5. 截图按macOS正常屏幕录制授权流程操作；系统要求退出时退出再打开。
 
-1. 下载 DMG，双击打开；附件名为 `PinoraDesk.dmg`。
-2. 把`PinoraDesk.app`拖到`Applications`，或拷贝到自己的“应用程序”目录。
-3. 弹出磁盘映像，从“应用程序”打开轻栈；后续一直运行这一份副本。
-4. 如果已有旧版在运行，先用轻栈菜单“退出轻栈”，再替换同一位置的应用；不要一边运行一边覆盖。
+本包沿用固定本地开发签名、未经Apple公证；不声称完成跨机器安装升级验收。首次打开只采用系统提供的单应用放行流程。恶意软件／损坏提示不要当普通验证提示绕过，不关闭整机保护，不重置其他应用权限。
 
-## 使用ZIP安装
+## 完整性核对
 
-1. 下载应用 ZIP 并完整解压；附件名为 `PinoraDesk.zip`。
-2. 找到`PinoraDesk.app`，放入“应用程序”后打开。
-3. 随包说明、许可资料可另行保留；无需把整个工程、Node、Rust或编译缓存一起安装。
-
-## 首次打开
-
-当前是本机开发签名、尚未公证的预览包。若macOS提示无法验证开发者，确认来源与完整性后，按[Apple正常的单应用放行步骤](FAQ.zh-CN.md#first-open)处理。若提示恶意软件、会损坏电脑或已损坏，不要关闭安全保护强行运行，先重新核对包并反馈提示。
-
-首次配置默认`Option+Space`；也可以从菜单栏或Dock打开，再到设置修改。演示中的`Control+Option+Space`是开发设备个人配置。
-
-## 截图权限与数据
-
-截图需要系统正常屏幕录制授权，只允许正在运行的这一份轻栈。按系统要求真正退出并重新打开；关闭窗口通常只隐藏。[详细排查](FAQ.zh-CN.md#screen-permission)。
-
-自动剪贴板采集、截图历史、贴图记住和WASM默认关闭。开启贴图记住会保存原图/原文及可编辑标注；备份可能包含这些内容，不等于脱敏图片。
-
-## 文件完整性
-
-同一版本页提供`SHA256SUMS.txt`。可在终端中对下载文件计算SHA-256，与校验文件相应一行比较，以下以本版本短文件名为例；校验历史版本时使用实际下载文件名：
+下载同版本SHA256SUMS.txt，在保存安装包的目录运行：
 
 ```sh
-LC_ALL=C /usr/bin/shasum -a 256 PinoraDesk.dmg
+shasum -a 256 PinoraDesk.dmg
 ```
 
-校验一致仅说明文件与发布附件一致，不等于Apple公证或没有软件缺陷。若不一致，停止使用该下载副本并重新下载。
+与校验文件同名条目比对。不同则停止使用并重新下载。摘要相同不等于Apple公证或无缺陷。
 
 ## 更新和卸载
 
-更新前真正退出轻栈，备份需要保留的数据，再替换“应用程序”中的同一份App。当前没有自动更新机制，不要同时运行多个解压副本。
+1.0.0设置页有手动更新流程，但尚未配置真实可信清单，请使用公开版本页下载。下载不自动安装；更新前真正退出并保留旧包／备份。卸载App不自动删除本机数据；清理前在对应数据维护入口确认目标。
 
-不再使用时先退出，再删除“应用程序”中的App。删除App不等于删除本机数据；如需清理数据，请使用应用提供的数据维护入口并核对目标，不要盲删Library目录或运行别人提供的清理命令。
-
-## 已知范围
-
-这不是已完成正式发行验收的稳定版。历史远程CI记录仍包含Mac本地HTTPS夹具超时和Windows Rust lint失败；Mac夹具已在本地修复并回归，远程CI尚未重跑。Windows工作按用户要求暂停；真实多屏、多Space、权限撤回、安装升级等矩阵未全部验收。应用包只在本机封装/解包/签名完整性层面核对，跨机器下载后的首次Gatekeeper与权限流程仍需实测。
-
-[完整功能手册](USER_GUIDE.zh-CN.md) · [常见问题](FAQ.zh-CN.md) · [验证边界](VERIFICATION_0.2.0.md)
+[完整使用手册](USER_GUIDE.zh-CN.md) · [FAQ](FAQ.zh-CN.md) · [验证范围](VERIFICATION_1.0.0.md)
